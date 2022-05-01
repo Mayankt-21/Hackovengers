@@ -43,12 +43,12 @@
     body {
       font-family: "Lato", sans-serif;
     }
-
-    .sidepanel {
-      width: -10px;
+    
+    .sidepanel  {
+      width: 150px;
       position: fixed;
       z-index: 1;
-      height: 235px;
+      height: 200px;
       top: 0;
       left: 0;
       background-color: #111;
@@ -60,7 +60,7 @@
     .sidepanel a {
       padding: 8px 8px 8px 10px;
       text-decoration: none;
-      font-size: 30px;
+      font-size: 19px;
       color: #818181;
       display: block;
       transition: 0.3s;
@@ -92,39 +92,56 @@
   </style>
 
   </head>
-  <script>
-
-    var config = {
-      apiKey: "AIzaSyCTomU2irQIP7oBNv1ibaIkOCgLVj8AuHU",
-      authDomain: "hosteler-8cd2f.firebaseapp.com",
-      projectId: "hosteler-8cd2f",
-      storageBucket: "hosteler-8cd2f.appspot.com",
-      messagingSenderId: "414901284616",
-      appId: "1:414901284616:web:e74e8c98d33ac54a5f86bd",
-      measurementId: "G-X3F7BWFN8X"
-    };
-
-    // Initialize Firebase
-    firebase.initializeApp(config);
-    const db = firebase.firestore();
-    db.settings({ timestampsInSnapshots: true }); 
-  </script>
 
   <script src="exchange.js"></script>
 
   <body>
 
+    </head>
+    
+ </style>
+ <script>
+ 
+      var config = {
+        apiKey: "AIzaSyCTomU2irQIP7oBNv1ibaIkOCgLVj8AuHU",
+        authDomain: "hosteler-8cd2f.firebaseapp.com",
+        projectId: "hosteler-8cd2f",
+        storageBucket: "hosteler-8cd2f.appspot.com",
+        messagingSenderId: "414901284616",
+        appId: "1:414901284616:web:e74e8c98d33ac54a5f86bd",
+        measurementId: "G-X3F7BWFN8X"
+      };
+    
+      // Initialize Firebase
+      firebase.initializeApp(config);
+      const db= firebase.firestore();
+      db.settings({ timestampsInSnapshots: true }); 
+    </script>
+    
+    <script src="exchange.js"></script>
+    <body>
+    
     <div id="mySidepanel" class="sidepanel">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-      <a href="#">Home</a>
-      <a href="#">Hostel Info.</a>
-      <a href="#">Guidlines</a>
+      <a href="front.html">Home</a>
+      <a href="css4.html">Hostel Info.</a>
+      <a href="guidlines.html">Guidlines</a>
       <a href="HELP.html">Help</a>
     </div>
     <script>
-      function openNav() {
-        document.getElementById("mySidepanel").style.width = "250px";
-      }
+        function openNav() {
+          document.getElementById("mySidepanel").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidepanel").style.width = "0";
+        }
+        </script>
+           
+    
+    <button class="openbtn" onclick="openNav()">☰</button>  </div>
+ </div>
+ 
 
       function closeNav() {
         document.getElementById("mySidepanel").style.width = "0";
